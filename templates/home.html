@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1 class="text-center">Process Executor</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Process Name</th>
+                <th>Action</th>
+                <th>Last Execute</th>
+                <th>Log</th>
+                <th>Clear Log</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Test Process 1</td>
+                <td><a class="btn btn-primary" href="{{ url_for('run_process', process_id=1) }}">Run</a></td>
+                <td id="last-execute-1">{{ last_execution_times[1] }}</td>
+                <td><a class="btn btn-secondary" href="{{ url_for('view_log', process_id=1) }}">View Log</a></td>
+                <td><a class="btn btn-danger" href="{{ url_for('clear_log', process_id=1) }}">Clear Log</a></td>
+            </tr>
+            <tr>
+                <td>Test Process 2</td>
+                <td><a class="btn btn-primary" href="{{ url_for('run_process', process_id=2) }}">Run</a></td>
+                <td id="last-execute-2">{{ last_execution_times[2] }}</td>
+                <td><a class="btn btn-secondary" href="{{ url_for('view_log', process_id=2) }}">View Log</a></td>
+                <td><a class="btn btn-danger" href="{{ url_for('clear_log', process_id=2) }}">Clear Log</a></td>
+            </tr>
+            <tr>
+                <td>Test Process 3</td>
+                <td><a class="btn btn-primary" href="{{ url_for('run_process', process_id=3) }}">Run</a></td>
+                <td id="last-execute-3">{{ last_execution_times[3] }}</td>
+                <td><a class="btn btn-secondary" href="{{ url_for('view_log', process_id=3) }}">View Log</a></td>
+                <td><a class="btn btn-danger" href="{{ url_for('clear_log', process_id=3) }}">Clear Log</a></td>
+            </tr>
+            <tr>
+                <td>Test Process 4</td>
+                <td><a class="btn btn-primary" href="{{ url_for('run_process', process_id=4) }}">Run</a></td>
+                <td id="last-execute-4">{{ last_execution_times[4] }}</td>
+                <td><a class="btn btn-secondary" href="{{ url_for('view_log', process_id=4) }}">View Log</a></td>
+                <td><a class="btn btn-danger" href="{{ url_for('clear_log', process_id=4) }}">Clear Log</a></td>
+            </tr>
+            <tr>
+                <td>Test Process 5</td>
+                <td><a class="btn btn-primary" href="{{ url_for('run_process', process_id=5) }}">Run</a></td>
+                <td id="last-execute-5">{{ last_execution_times[5] }}</td>
+                <td><a class="btn btn-secondary" href="{{ url_for('view_log', process_id=5) }}">View Log</a></td>
+                <td><a class="btn btn-danger" href="{{ url_for('clear_log', process_id=5) }}">Clear Log</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+{% endblock %}

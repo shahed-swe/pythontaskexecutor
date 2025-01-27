@@ -1,0 +1,53 @@
+body {
+    transition: background-color 0.5s, color 0.5s;
+}
+
+/* Dark Theme Styles */
+body.dark {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.navbar.dark {
+    background-color: #343a40;
+}
+
+.table.dark {
+    background-color: #1e1e1e;
+}
+
+.table.dark th {
+    background-color: #343a40;
+}
+
+.table.dark td {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+/* Light Theme Styles */
+body.light {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.navbar.light {
+    background-color: #f8f9fa;
+}
+
+.table.light {
+    background-color: #ffffff;
+}
+
+.table.light th {
+    background-color: #f8f9fa;
+}
+
+.table.light td {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.navbar {
+    transition: background-color 0.5s;
+}
